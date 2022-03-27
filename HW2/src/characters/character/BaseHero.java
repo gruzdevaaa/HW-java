@@ -89,8 +89,9 @@ public class BaseHero implements Hero {
 
     @Override
     public boolean detectEnemy(Hero enemy) {
-        System.out.println("Enemy is in attack range: " + (this.attackRange >= Math.abs(enemy.getLocation() - this.location)));
-        return (this.attackRange >= Math.abs(enemy.getLocation() - this.location));
+        boolean rangeFlag = this.attackRange >= Math.abs(enemy.getLocation() - this.location);
+        System.out.println("Enemy is in attack range: " + rangeFlag);
+        return (rangeFlag);
     }
 
     @Override
